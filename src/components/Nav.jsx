@@ -1,7 +1,7 @@
 import React from 'react'
 import { useCartContext } from 'states/Cart/CartProvider'
 
-import cartIcon from 'assets/cart.png'
+import cartIcon from 'assets/icons/cart.svg'
 
 const Nav = () => {
   const { state: { products } } = useCartContext()

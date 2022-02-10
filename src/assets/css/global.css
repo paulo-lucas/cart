@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: #808080;
+}
+
+nav {
+  background-color: #41d3be;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15vw;
+  height: 10vh;
+  align-items: center;
+}
+
+nav .cart-icon-wrapper {
+  position: relative;
+  cursor: pointer;
+  height: 65%;
+}
+
+nav .cart-icon-wrapper img {
+  height: 100%;
+}
+
+nav .cart-icon-wrapper span {
+  position: absolute;
+  top: 0;
+  right: -0.6em;
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  width: 1.3em;
+  height: 1.3em;
+  text-align: center;
+  border-radius: 100%;
+}
+
+main {
+  background-color: #f1f1f1;
+  min-height: 90vh;
+  padding: 0px 15vw;
+}
+
+main h2 {
+  color: grey;
+  padding: 25px 0;
+}
+
+main .new-item-wrapper {
+  box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.04);
+  background-color: #ffffff;
+  display: inline-flex;
+  padding: 2em;
+  height: 5em;
+  flex-direction: row;
+  align-items: center;
+}
+
+main .new-item-wrapper input {
+  border: none;
+  outline: none;
+  border-bottom: 1px grey solid;
+  padding: 5px;
+  transition: all .3s;
+}
+
+main .new-item-wrapper input:focus {
+  padding: 10px;
+  border-bottom-width: 2px;
+}
+
+main .new-item-wrapper button {
+  margin-left: 2em;
+  border-radius: 20px;
+  background-color: #41d3be;
+  border: none;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 8px 20px;
+  cursor: pointer;
+}
+
+.btn-primario {
+  text-align: center;
+  border-radius: 3px;
+  padding: 5px 20px;
+  margin: 0 10px;
+  font-weight: 600;
+  border: 2px solid white;
+
+  color: white;
+  background: transparent;
+}
+
+.btn-secundario {
+  text-align: center;
+  border-radius: 3px;
+  padding: 5px 20px;
+  margin: 0 10px;
+  font-weight: 600;
+  border: 2px solid white;
+
+  background: white;
+  color: #41d3be;
+}
+
+.conteudo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.imagem-logo {
+  height: 50px;
+  width: 50px;
+}
+
+.imagem-icone {
+  height: 25px;
+  width: 25px;
+}
+
+.saldo {
+  font-weight: 700;
+  font-size: 32px;
+}
+
+.detalhe {
+  color: #41d3be;
+  font-size: 24px;
+}
+
+
+
+@media (max-width: 800px) {
+  main .cart {
+    margin: 5px;
+  }
+
+  .conteudo {
+    flex-direction: column;
+  }
+}
