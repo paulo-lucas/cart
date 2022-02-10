@@ -22,17 +22,21 @@ const Item = ({ product }) => {
   }
 
   return <li className="item">
-    <p>{product.name}</p>
-    <p>Qtt: {product.quantity}</p>
+    <div className="info">
+      <h2>{product.name}</h2>
+      <p>Qtt: {product.quantity}</p>
+    </div>
 
     <div className="actions">
-      <button onClick={() => updateQuantity(product.quantity - 1)}>
-        <IcRemove className="action-icon" />
-      </button>
+      <div className="quantity">
+        <button onClick={() => updateQuantity(product.quantity - 1)}>
+          <IcRemove className="action-icon" />
+        </button>
 
-      <button onClick={() => updateQuantity(product.quantity + 1)}>
-        <IcAdd className="action-icon" />
-      </button>
+        <button onClick={() => updateQuantity(product.quantity + 1)}>
+          <IcAdd className="action-icon" />
+        </button>
+      </div>
 
       <button onClick={() => remove()}>
         <IcTrash className="action-icon" />

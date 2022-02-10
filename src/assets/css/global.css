@@ -95,6 +95,10 @@ main .new-item-wrapper button {
   cursor: pointer;
 }
 
+main .cart ul {
+  list-style-type: none;
+}
+
 @media (max-width: 800px) {
   main {
     padding: 0 5vw;
@@ -106,3 +110,53 @@ main .new-item-wrapper button {
 }
 
 /** Cart item styles */
+.item {
+  margin-top: 2rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  box-shadow: 2px 2px 5px gray;
+  background-color: #fefefe;
+}
+
+.item .info {
+  flex-grow: 1;
+  padding: 0 1rem 0 2rem;
+}
+
+.item .actions {
+  display: inline-flex;
+  padding: 0 1rem;
+  background-color: #41d3be;
+  flex-flow: row nowrap;
+}
+
+.item .actions .quantity {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.item .actions button {
+  cursor: pointer;
+  padding: 5px;
+  border: none;
+  background: none;
+}
+
+.item .actions .action-icon {
+  width: 3rem;
+  height: 3rem;
+}
+
+.item .actions .action-icon * {
+  fill: #fefefe;
+  transition: all .1s;
+}
+
+.item .actions .quantity button:hover .action-icon * {
+  fill: #808080;
+}
+
+.item .actions > button:hover .action-icon * {
+  fill: #ff8080;
+}

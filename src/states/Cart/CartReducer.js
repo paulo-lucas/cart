@@ -11,6 +11,11 @@ const initialState = {
     {
       id: 1,
       name: 'Bar',
+      quantity: 3
+    },
+    {
+      id: 1,
+      name: 'FooBar',
       quantity: 2
     }
   ]
