@@ -15,7 +15,8 @@ const Cart = () => {
   }
 
   return <main>
-    <h2>Your Cart</h2><div className='new-item-wrapper' >
+    <h2>Your Cart</h2>
+    <div className='new-item-wrapper' >
       <input
         type='text'
         placeholder='New item'

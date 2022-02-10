@@ -1,7 +1,7 @@
 import React from 'react'
 import { useCartContext } from 'states/Cart/CartProvider'
 
-import cartIcon from 'assets/icons/cart.svg'
+import { IcCart } from 'assets/icons'
 
 const Nav = () => {
   const { state: { products } } = useCartContext()
@@ -9,7 +9,7 @@ const Nav = () => {
   return <nav>
     <h1>SHOP</h1>
     <div className='cart-icon-wrapper'>
-      <img src={cartIcon} alt="Cart" />
+      <IcCart className="cart-icon" />
       <span>{products.length}</span>
     </div>
   </nav>

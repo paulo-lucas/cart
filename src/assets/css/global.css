@@ -9,6 +9,8 @@
   color: #808080;
 }
 
+
+/** Nav styles */
 nav {
   background-color: #41d3be;
   display: flex;
@@ -21,11 +23,16 @@ nav {
 nav .cart-icon-wrapper {
   position: relative;
   cursor: pointer;
-  height: 65%;
+  height: 6.5vh;
 }
 
-nav .cart-icon-wrapper img {
-  height: 100%;
+nav .cart-icon-wrapper .cart-icon {
+  height: 6.5vh;
+  width: 6.5vh;
+}
+
+nav .cart-icon-wrapper .cart-icon * {
+  fill: #808080;
 }
 
 nav .cart-icon-wrapper span {
@@ -41,6 +48,7 @@ nav .cart-icon-wrapper span {
   border-radius: 100%;
 }
 
+/** Cart styles */
 main {
   background-color: #f1f1f1;
   min-height: 90vh;
@@ -87,64 +95,14 @@ main .new-item-wrapper button {
   cursor: pointer;
 }
 
-.btn-primario {
-  text-align: center;
-  border-radius: 3px;
-  padding: 5px 20px;
-  margin: 0 10px;
-  font-weight: 600;
-  border: 2px solid white;
-
-  color: white;
-  background: transparent;
-}
-
-.btn-secundario {
-  text-align: center;
-  border-radius: 3px;
-  padding: 5px 20px;
-  margin: 0 10px;
-  font-weight: 600;
-  border: 2px solid white;
-
-  background: white;
-  color: #41d3be;
-}
-
-.conteudo {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.imagem-logo {
-  height: 50px;
-  width: 50px;
-}
-
-.imagem-icone {
-  height: 25px;
-  width: 25px;
-}
-
-.saldo {
-  font-weight: 700;
-  font-size: 32px;
-}
-
-.detalhe {
-  color: #41d3be;
-  font-size: 24px;
-}
-
-
-
 @media (max-width: 800px) {
+  main {
+    padding: 0 5vw;
+  }
+
   main .cart {
     margin: 5px;
   }
-
-  .conteudo {
-    flex-direction: column;
-  }
 }
+
+/** Cart item styles */

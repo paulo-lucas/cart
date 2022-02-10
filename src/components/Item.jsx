@@ -1,7 +1,5 @@
 import { useCartContext } from 'states/Cart/CartProvider'
-import removeIcon from 'assets/icons/remove.svg'
-import addIcon from 'assets/icons/add.svg'
-import trashIcon from 'assets/icons/trash.svg'
+import { IcRemove, IcAdd, IcTrash } from 'assets/icons'
 
 const Item = ({ product }) => {
   const { dispatch } = useCartContext()
@@ -23,21 +21,21 @@ const Item = ({ product }) => {
     })
   }
 
-  return <li>
+  return <li className="item">
     <p>{product.name}</p>
     <p>Qtt: {product.quantity}</p>
 
     <div className="actions">
       <button onClick={() => updateQuantity(product.quantity - 1)}>
-        <img src={removeIcon} alt="Remove" />
+        <IcRemove className="action-icon" />
       </button>
 
       <button onClick={() => updateQuantity(product.quantity + 1)}>
-        <img src={addIcon} alt="Add" />
+        <IcAdd className="action-icon" />
       </button>
 
       <button onClick={() => remove()}>
-        <img src={trashIcon} alt="Delete" />
+        <IcTrash className="action-icon" />
       </button>
     </div>
   </li>
