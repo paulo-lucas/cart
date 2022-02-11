@@ -1,15 +1,13 @@
-import React from 'react'
-import CartProvider from 'states/Cart/CartProvider'
-
+import GlobalProvider from 'states/Global/Provider'
 import Cart from 'components/Cart'
 import Nav from 'components/Nav'
 
 function App() {
   return (
-    <CartProvider>
+    <GlobalProvider>
       <Nav />
       <Cart />
-    </CartProvider>
+    </GlobalProvider>
   )
 }
 

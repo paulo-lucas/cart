@@ -1,22 +1,22 @@
-import { useCartContext } from 'states/Cart/CartProvider'
+import { useGlobalContext } from 'states/Global/Provider'
 import { IcRemove, IcAdd, IcTrash } from 'assets/icons'
 
 const Item = ({ product }) => {
-  const { dispatch } = useCartContext()
+  const { dispatch } = useGlobalContext()
 
-  const remove = () => {
+  const handleRemove = () => {
     dispatch({
-      type: 'remove',
-      payload: { id: product.id }
+      type: 'removeItem',
+      payload: { name: product.name }
     })
   }
 
-  const updateQuantity = (quantity) => {
+  const handleUpdateQuantity = (qtt) => {
     dispatch({
       type: 'updateQuantity',
       payload: {
-        id: product.id,
-        quantity
+        name: product.name,
+        qtt
       }
     })
   }
@@ -24,21 +24,21 @@ const Item = ({ product }) => {
   return <li className="item">
     <div className="info">
       <h2>{product.name}</h2>
-      <p>Qtt: {product.quantity}</p>
+      <p>Qtt: {product.qtt}</p>
     </div>
 
     <div className="actions">
       <div className="quantity">
-        <button onClick={() => updateQuantity(product.quantity - 1)}>
+        <button onClick={() => handleUpdateQuantity(product.qtt - 1)}>
           <IcRemove className="action-icon" />
         </button>
 
-        <button onClick={() => updateQuantity(product.quantity + 1)}>
+        <button onClick={() => handleUpdateQuantity(product.qtt + 1)}>
           <IcAdd className="action-icon" />
         </button>
       </div>
 
-      <button onClick={() => remove()}>
+      <button onClick={handleRemove}>
         <IcTrash className="action-icon" />
       </button>
     </div>
